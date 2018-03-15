@@ -1,0 +1,33 @@
+.main-container{:style => "font-size: 20px;color: #333;"}
+  %ul#lightgallery.list-unstyled.row
+    - @users.each do |user| 
+      %li.col-md-2{:style => "margin-bottom:10px;"}
+        - imag = user.image.url(:large)
+        %a.fancybox-thumb{:href => "#{imag}", :rel => "fancybox-thumb"}
+          = image_tag(user.image.url(:small), :height => "max-height")
+        %p{:style => "color:#000;"}
+          %strong
+          Tagline of the image:- #{user.tagline}
+        %p{:style => "color:#000;"}
+          %strong
+          OWNER NAME:- #{user.name}
+        = link_to 'destroy', user_path(user), method: :delete, data: { clear:'Are you sure?'}, :style => "text-decoration:none"
+  = link_to "New image", new_user_path, :class => "btn btn-success", :style => "text-decoration:none"
+
+:javascript
+  $(document).ready(function() {
+    $(".fancybox-thumb").fancybox({
+      prevEffect  : 'none',
+      nextEffect  : 'none',
+      helpers : {
+        title : {
+          type: 'outside'
+        },
+        thumbs  : {
+          width : 50,
+          height  : 50,
+        }
+      }
+    });
+  });
+ 

@@ -1,0 +1,13 @@
+.container.bg-9
+  .row
+    %br/
+    %p
+      %strong Image:
+      = @user.image.url(:medium)
+    %p
+      %strong Tagline:
+      = @user.tagline
+    %p
+      %strong Owner:
+      = @user.name
+    = link_to 'Back', users_path, :class => "btn btn-success", :style => "text-decoration:none"
