@@ -31,3 +31,4 @@ Things you may want to cover:
 * listing page created with image and tagline and owner name and using fancybox created a clickable image 
 * and given destroy link in the below of the image to delete the image
 * given link to sing-out the session after a user signed-in
+* changed the database mysql to postgres for deployment in the heroku 
