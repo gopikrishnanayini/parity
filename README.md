@@ -32,3 +32,4 @@ Things you may want to cover:
 * and given destroy link in the below of the image to delete the image
 * given link to sing-out the session after a user signed-in
 * changed the database mysql to postgres for deployment in the heroku 
+* added created_at time in the listing

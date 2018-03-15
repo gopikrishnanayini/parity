@@ -11,6 +11,9 @@
         %p{:style => "color:#000;"}
           %strong
           OWNER NAME:- #{user.name}
+        %p{:style => "color:#000;"}
+          %strong
+          Created At:- #{user.created_at}        
         = link_to 'destroy', user_path(user), method: :delete, data: { clear:'Are you sure?'}, :style => "text-decoration:none"
   = link_to "New image", new_user_path, :class => "btn btn-success", :style => "text-decoration:none"
 
